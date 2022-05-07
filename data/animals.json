@@ -117,6 +117,16 @@
         "loving"
       ],
       "id": "11"
+    },
+    {
+      "name": "Tim",
+      "species": "Turtle",
+      "diet": "herbivore",
+      "personalityTraits": [
+        "loving",
+        "goofy"
+      ],
+      "id": "12"
     }
   ]
 }

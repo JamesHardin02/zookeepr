@@ -1,3 +1,4 @@
+// modules
 const express = require('express');
 const { animals } = require('./data/animals');
 const fs = require('fs');
@@ -6,10 +7,11 @@ const path = require('path');
 const PORT = process.env.PORT || 3001;
 const app = express();
 
-// parse incoming string or array data
+// parse incoming string or array including nested arrays/objs into json
 app.use(express.urlencoded({ extended: true }));
-// parse incoming JSON data
+// parse incoming JSON data in js obj
 app.use(express.json());
+// middleware for files that call dependencies load the public folder
 app.use(express.static('public'));
 
 function filterByQuery(query, animalsArray) {
